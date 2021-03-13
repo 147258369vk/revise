@@ -1,0 +1,20 @@
+nav ul ul {
+	display: none;
+	position: absolute;
+	top: 190px; /* the height of the main nav */
+}
+nav ul li:hover > ul {
+	display:inherit;
+}
+nav ul ul li {
+	width:170px;
+	float:none;
+	display:list-item;
+	position: relative;
+  color:black;
+}
+nav ul ul li a
+{
+  color:white;
+  text-decoration: none;
+}

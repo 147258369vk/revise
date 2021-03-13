@@ -1,0 +1,38 @@
+
+<div class="container">
+Welcome {{name}}
+
+<br><br>
+
+
+<input type="text" class="form-control" #username>
+<br>
+<button class="btn btn-primary" (click)="changeText(username)">Change Name</button>
+
+
+</div>
+
+<p *ngIf="showMessage">
+  Button is clicked
+</p>
+
+
+<div class="container">
+
+<button (click)="test()" [disabled]="buttonProp">click here</button>
+</div>
+<br><br>
+
+<p *ngFor="let user of data">
+  {{user.name}}
+  <br>
+  {{user.profile}}
+  <br>
+  {{user.location}}
+
+</p>
+
+
+
+
+

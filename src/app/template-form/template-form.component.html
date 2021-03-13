@@ -1,0 +1,30 @@
+<div class="container">
+  <form #registForm="ngForm" (ngSubmit)="getData(registForm)">
+    Enter name:
+    <input type="text"
+    class="form-control"
+    name="username"
+    username="ngModel"
+    [(ngModel)]="userdetails.username">
+    <br>
+    <br>
+
+    Enter email:
+    <input type="text"
+    class="form-control"
+    name="email"
+    ngModel>
+
+    <br><br>
+    Select city:
+    <select name="city" ngModel>
+      <option>Delhi</option>
+      <option>Mumbai</option>
+      <option>Chandigarh</option>
+      <option>Panchkula</option>
+    </select>
+
+    <br><br>
+    <input type="submit" value="Add User">
+  </form>
+</div>
