@@ -1,0 +1,52 @@
+<mat-card>
+
+<mat-toolbar>Reactive Form</mat-toolbar>
+
+<br><br>
+
+
+<form [formGroup]="Register" (ngSubmit)="onsubmit()">
+  <mat-form-field>
+    <input
+    type="text"
+    name="username"
+    placeholder="Name"
+    matInput
+    formControlName="username">
+  </mat-form-field>
+
+
+  <mat-form-field>
+    <input
+    type="text"
+    name="email"
+    placeholder="Email"
+    matInput
+    formControlName="email">
+  </mat-form-field>
+
+  <mat-form-field>
+    <input
+    type="password"
+    name="password"
+    placeholder="password"
+    matInput
+    formControlName="password">
+
+  </mat-form-field>
+
+  <mat-form-field>
+    <input
+    type="cpassword"
+    name="cpassword"
+    matInput
+    placeholder="Confirm password"
+    formControlName="cpassword">
+  </mat-form-field>
+
+  <br><br>
+  <button type="submit" mat-raised-button color="primary">Submit</button>
+</form>
+
+<form></form>
+</mat-card>

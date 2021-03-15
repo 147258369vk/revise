@@ -14,6 +14,7 @@ import { ElementsComponent } from './elements/elements.component';
 import { HomeComponent } from './home/home.component';
 import { ThemesComponent } from './themes/themes.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { TemplateFormComponent } from './template-form/template-form.component';
 
 //material components
 
@@ -21,11 +22,13 @@ import { MatButtonModule } from '@angular/material/button';
 import {MatCardModule} from '@angular/material/card';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatFormFieldModule } from '@angular/material/form-field';
-import { TemplateFormComponent } from './template-form/template-form.component';
+
+import { MatInputModule } from '@angular/material/input';
 
 
 //Angular forms module
-import { FormsModule } from '@angular/forms';
+import { FormsModule,ReactiveFormsModule } from '@angular/forms';
+import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
 
 
 @NgModule({
@@ -41,7 +44,8 @@ import { FormsModule } from '@angular/forms';
     ElementsComponent,
     HomeComponent,
     ThemesComponent,
-    TemplateFormComponent
+    TemplateFormComponent,
+    ReactiveFormComponent
   ],
   imports: [
     BrowserModule,
@@ -51,7 +55,9 @@ import { FormsModule } from '@angular/forms';
     MatCardModule,
     MatToolbarModule,
     MatFormFieldModule,
-    FormsModule
+    FormsModule,
+    MatInputModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

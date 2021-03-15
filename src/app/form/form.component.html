@@ -1,1 +1,98 @@
-<p>form works!</p>
+
+<mat-card>
+  <mat-toolbar>Template Driven Form</mat-toolbar>
+
+  <br><br>
+<form name="form" #register="ngForm" (ngSubmit)="register.form.valid && onsubmit(register)">
+  <mat-form-field>
+  <input
+  type="text"
+  name="name"
+  #name="ngModel"
+  [(ngModel)]="model.username"
+  placeholder="Enter your name"
+  matInput
+  required
+  minlength="5"
+  [ngClass]="{'is-invalid':register.submitted && name.invalid}">
+</mat-form-field>
+
+<mat-error *ngIf="register.submitted && name.invalid">
+  <mat-error *ngIf="name.errors?.required">
+    Name should not be left blank
+
+  </mat-error>
+
+  <mat-error *ngIf="name.errors?.minlength">
+    Name should be greater than 5 characters
+  </mat-error>
+
+</mat-error>
+
+
+
+
+  <br><br>
+
+  <mat-form-field>
+  <input
+  type="text"
+  name="email"
+  placeholder="Enter your email"
+  matInput
+  required
+  email
+  #email="ngModel"
+  [(ngModel)]="model.email"
+  [ngClass]="{'is-invalid':register.submitted && email.invalid}">
+</mat-form-field>
+
+<mat-error *ngIf="register.submitted && email.invalid">
+  <mat-error *ngIf="email.errors?.required">
+    Email is required
+  </mat-error>
+
+  <mat-error *ngIf="email.errors?.email">
+  Email format should be correct
+  </mat-error>
+
+</mat-error>
+
+  <br><br>
+
+  <mat-form-field>
+  <input type="text"
+  name="password"
+  placeholder="Enter password"
+  matInput
+  required
+  #password="ngModel"
+  [(ngModel)]="model.password"
+  [ngClass]="{'is-invalid':register.submitted && password.invalid}">
+</mat-form-field>
+
+<mat-error *ngIf="register.submitted && password.invalid">
+  <mat-error *ngIf="password.errors?.required">
+    password is required
+  </mat-error>
+  </mat-error>
+
+  <br><br>
+
+<mat-form-field>
+  <input
+  type="password"
+  placeholder="Enter confirm password"
+  matInput
+  name="cpassword"
+  pattern={{password.value}}>
+</mat-form-field>
+  <br><br>
+
+  <button type="submit" mat-raised-button color="primary">Submit</button>
+
+
+
+</form>
+
+</mat-card>

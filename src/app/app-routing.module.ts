@@ -3,9 +3,11 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { BannerComponent } from './banner/banner.component';
 import { ElementsComponent } from './elements/elements.component';
+import { FormComponent } from './form/form.component';
 import { GenericComponent } from './generic/generic.component';
 import { HomeComponent } from './home/home.component';
 import { MainComponent } from './main/main.component';
+import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
 import { TemplateFormComponent } from './template-form/template-form.component';
 import { TestComponent } from './test/test.component';
 import { ThemesComponent } from './themes/themes.component';
@@ -37,6 +39,14 @@ const routes: Routes = [
   {
     path:'templateForm',
     component:TemplateFormComponent
+  },
+  {
+    path:'form',
+    component:FormComponent
+  },
+  {
+    path:'reactive-form',
+    component:ReactiveFormComponent
   }
 ];
 
